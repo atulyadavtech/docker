@@ -1,7 +1,7 @@
 #This is a sample Image 
-FROM ubuntu 
-MAINTAINER demousr@gmail.com 
+FROM centos7 
+MAINTAINER atulyadavtech@gmail.com 
 
-RUN apt-get update 
-RUN apt-get install –y nginx 
+RUN yum-config-manager --disable updates
+RUN yum install epel* -y
 CMD [“echo”,”Image created”] 
